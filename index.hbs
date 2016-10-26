@@ -3,20 +3,20 @@
 <html>
   <head>
     {{{styles}}}
-    <script src="https://use.typekit.net/meu8wlg.js"></script>
+    <script src="https://use.typekit.net/ufw0fpr.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
   <body>
-    <div class="card card--vapescore tone--{{tone}}" data-state="{{variant_state}}">
+    <div class="card card--roomscore tone--{{tone}}" data-state="{{variant_state}}">
       <div class="branding">
-        <img src="{{base_url}}/images/vapescore-logo.svg">
+        <img src="{{base_url}}/images/logo.png">
       </div>
       <div class="main">
         <div class="target">
           <img class="grade" src="{{base_url}}/images/grades/{{grade}}.png">
           <div class="photo" style="background-image: url({{base_url}}/images/targets/{{target.image}})"></div>
         </div>
-        <div class="message" data-grade="{{grade}}">
+        <div class="message">
           <div class="greeting">
             Dear
             <span class="name">
@@ -36,14 +36,14 @@
               <div class="closing">
                 get our
                 <img class="grade" src="{{base_url}}/images/grades/{{grade}}.png">
-                VapeScore!
+                RoomScore!
               </div>
             </div>
 
             {{!-- ************ Help Variant ************ --}}
             <div class="content content--help">
               <div class="intro">
-                Your VapeScore is
+                Your RoomScore is
                 <img class="grade" src="{{base_url}}/images/grades/{{grade}}.png">
               </div>
               <div class="location">
@@ -57,7 +57,7 @@
             {{!-- ************ Hostile Variant ************ --}}
             <div class="content content--hostile">
               <div class="intro">
-                Your VapeScore is
+                Your RoomScore is
                 <img class="grade" src="{{base_url}}/images/grades/{{grade}}.png">
               </div>
               <div class="location">
@@ -71,7 +71,7 @@
           </div>
           <div class="signature {{#if avatar}}avatar{{/if}}">
             {{#if avatar}}
-              <div class="photo" style="background-image: url({{base_url}}/images/{{avatar}})"></div>
+              <div class="photo" style="background-image: url({{{avatar}}})"></div>
             {{/if}}
             <div class="user">
               <div class="name">
@@ -85,18 +85,13 @@
         </div>
       </div>
       <div class="footer">
-        <div class="footer-copy">
-          Find your city's grade at
-          <span class="url">
-            www.vapescore.org
-          </span>
-        </div>
-      </div>
-      <div class="smoke">
-        <img src="{{base_url}}/images/smoke.svg"/>
+        Find your city's grade at
+        <span class="url">
+          www.roomscore.org
+        </span>
       </div>
       <div class="background">
-        <div class="dots"></div>
+        <div class="highlight"></div>
       </div>
     </div>
     {{{scripts}}}
