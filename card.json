@@ -10,7 +10,7 @@
     }
   },
   "styles": [
-    "./css/styles.less"
+    "./css/styles.css"
   ],
   "variables": {
     "first": "Your",
