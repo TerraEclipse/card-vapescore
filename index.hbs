@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    {{{styles}}}
+    <script src="https://use.typekit.net/meu8wlg.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+  <body>
+    <div class="card card--vapescore tone--{{tone}}" data-state="{{variant_state}}">
+      <div class="branding">
+        <img src="{{base_url}}/images/vapescore-logo.svg">
+      </div>
+      <div class="main">
+        <div class="target">
+          <img class="grade" src="{{base_url}}/images/grades/{{grade}}.png">
+          <div class="photo" style="background-image: url({{base_url}}/images/targets/{{target.image}})"></div>
+        </div>
+        <div class="message" data-grade="{{grade}}">
+          <div class="greeting">
+            Dear
+            <span class="name">
+              {{target.title}} {{target.last}}...
+            </span>
+          </div>
+          <div class="body">
+
+            {{!-- ************ Thanks Variant ************ --}}
+            <div class="content content--thanks">
+              <div class="intro">
+                Thank you for helping
+              </div>
+              <div class="location">
+                {{variant_city}}, {{variant_state}}
+              </div>
+              <div class="closing">
+                get our
+                <img class="grade" src="{{base_url}}/images/grades/{{grade}}.png">
+                VapeScore!
+              </div>
+            </div>
+
+            {{!-- ************ Help Variant ************ --}}
+            <div class="content content--help">
+              <div class="intro">
+                Your VapeScore is
+                <img class="grade" src="{{base_url}}/images/grades/{{grade}}.png">
+              </div>
+              <div class="location">
+                {{variant_city}}, {{variant_state}}
+              </div>
+              <div class="closing">
+                has to raise the grade.
+              </div>
+            </div>
+
+            {{!-- ************ Hostile Variant ************ --}}
+            <div class="content content--hostile">
+              <div class="intro">
+                Your VapeScore is
+                <img class="grade" src="{{base_url}}/images/grades/{{grade}}.png">
+              </div>
+              <div class="location">
+                {{variant_city}}, {{variant_state}}
+              </div>
+              <div class="closing">
+                needs to improve now.
+              </div>
+            </div>
+
+          </div>
+          <div class="signature {{#if avatar}}avatar{{/if}}">
+            {{#if avatar}}
+              <div class="photo" style="background-image: url({{base_url}}/images/{{avatar}})"></div>
+            {{/if}}
+            <div class="user">
+              <div class="name">
+                {{first}} {{last}}
+              </div>
+              <div class="location">
+                {{city}}, {{state}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-copy">
+          Find your city's grade at
+          <span class="url">
+            www.vapescore.org
+          </span>
+        </div>
+      </div>
+      <div class="smoke">
+        <img src="{{base_url}}/images/smoke.svg"/>
+      </div>
+      <div class="background">
+        <div class="dots"></div>
+      </div>
+    </div>
+    {{{scripts}}}
+  </body>
+</html>

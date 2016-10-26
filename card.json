@@ -1,0 +1,752 @@
+{
+  "title": "Vapescore",
+  "description": "Vapescore Campaign",
+  "typekit": true,
+  "sizes": {
+    "twitter": {
+      "width": 800,
+      "height": 400,
+      "default": true
+    }
+  },
+  "styles": [
+    "./css/styles.less"
+  ],
+  "variables": {
+    "first": "Your",
+    "last": "Name",
+    "city": "City",
+    "state": "State",
+    "avatar": ""
+  },
+  "variants": {
+    "albuquerque": {
+      "variables": {
+        "variant_city": "Albuquerque",
+        "variant_state": "NM",
+        "grade": "A",
+        "tone": "thanks",
+        "target": {
+          "title": "Governor",
+          "name": "Susana Martinez",
+          "last": "Martinez",
+          "image": "martinez.jpg"
+        }
+      }
+    },
+    "atlanta": {
+      "variables": {
+        "variant_city": "Atlanta",
+        "variant_state": "GA",
+        "grade": "B",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Nathan Deal",
+          "last": "Deal",
+          "image": "deal.jpg"
+        }
+      }
+    },
+    "austin": {
+      "variables": {
+        "variant_city": "Austin",
+        "variant_state": "TX",
+        "grade": "B+",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Greg Abbott",
+          "last": "Abbott",
+          "image": "abbott.jpg"
+        }
+      }
+    },
+    "baltimore": {
+      "variables": {
+        "variant_city": "Baltimore",
+        "variant_state": "MD",
+        "grade": "B",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Larry Hogan",
+          "last": "Hogan",
+          "image": "hogan.jpg"
+        }
+      }
+    },
+    "birmingham": {
+      "variables": {
+        "variant_city": "Birmingham",
+        "variant_state": "AL",
+        "grade": "B+",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Robert Bentley",
+          "last": "Bentley",
+          "image": "bentley.jpg"
+        }
+      }
+    },
+    "boston": {
+      "variables": {
+        "variant_city": "Boston",
+        "variant_state": "MA",
+        "grade": "F",
+        "tone": "hostile",
+        "target": {
+          "title": "Governor",
+          "name": "Charlie Baker",
+          "last": "Baker",
+          "image": "baker.jpg"
+        }
+      }
+    },
+    "charlotte": {
+      "variables": {
+        "variant_city": "Charlotte",
+        "variant_state": "NC",
+        "grade": "B",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Pat McCrory",
+          "last": "McCrory",
+          "image": "mccrory.jpg"
+        }
+      }
+    },
+    "chicago": {
+      "variables": {
+        "variant_city": "Chicago",
+        "variant_state": "IL",
+        "grade": "F",
+        "tone": "hostile",
+        "target": {
+          "title": "Governor",
+          "name": "Bruce Rauner",
+          "last": "Rauner",
+          "image": "rauner.jpg"
+        }
+      }
+    },
+    "cleveland": {
+      "variables": {
+        "variant_city": "Cleveland",
+        "variant_state": "OH",
+        "grade": "B+",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "John Kasich",
+          "last": "Kasich",
+          "image": "kasich.jpg"
+        }
+      }
+    },
+    "colorado_springs": {
+      "variables": {
+        "variant_city": "Colorado Springs",
+        "variant_state": "CO",
+        "grade": "A-",
+        "tone": "thanks",
+        "target": {
+          "title": "Governor",
+          "name": "John Hickenlooper",
+          "last": "Hickenlooper",
+          "image": "hickenlooper.jpg"
+        }
+      }
+    },
+    "columbus": {
+      "variables": {
+        "variant_city": "Columbus",
+        "variant_state": "OH",
+        "grade": "B+",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "John Kasich",
+          "last": "Kasich",
+          "image": "kasich.jpg"
+        }
+      }
+    },
+    "dallas": {
+      "variables": {
+        "variant_city": "Dallas",
+        "variant_state": "TX",
+        "grade": "B+",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Greg Abbott",
+          "last": "Abbott",
+          "image": "abbott.jpg"
+        }
+      }
+    },
+    "denver": {
+      "variables": {
+        "variant_city": "Denver",
+        "variant_state": "CO",
+        "grade": "A-",
+        "tone": "thanks",
+        "target": {
+          "title": "Governor",
+          "name": "John Hickenlooper",
+          "last": "Hickenlooper",
+          "image": "hickenlooper.jpg"
+        }
+      }
+    },
+    "detroit": {
+      "variables": {
+        "variant_city": "Detroit",
+        "variant_state": "MI",
+        "grade": "C+",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Rick Snyder",
+          "last": "Snyder",
+          "image": "snyder.jpg"
+        }
+      }
+    },
+    "el_paso": {
+      "variables": {
+        "variant_city": "El Paso",
+        "variant_state": "TX",
+        "grade": "D",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Greg Abbott",
+          "last": "Abbott",
+          "image": "abbott.jpg"
+        }
+      }
+    },
+    "fort_worth": {
+      "variables": {
+        "variant_city": "Fort Worth",
+        "variant_state": "TX",
+        "grade": "B+",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Greg Abbott",
+          "last": "Abbott",
+          "image": "abbott.jpg"
+        }
+      }
+    },
+    "fresno": {
+      "variables": {
+        "variant_city": "Fresno",
+        "variant_state": "CA",
+        "grade": "F",
+        "tone": "hostile",
+        "target": {
+          "title": "Governor",
+          "name": "Edmund G. Brown Jr.",
+          "last": "Brown",
+          "image": "brown_jerry.jpg"
+        }
+      }
+    },
+    "houston": {
+      "variables": {
+        "variant_city": "Houston",
+        "variant_state": "TX",
+        "grade": "B+",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Greg Abbott",
+          "last": "Abbott",
+          "image": "abbott.jpg"
+        }
+      }
+    },
+    "indianapolis": {
+      "variables": {
+        "variant_city": "Indianapolis",
+        "variant_state": "IN",
+        "grade": "D-",
+        "tone": "hostile",
+        "target": {
+          "title": "Governor",
+          "name": "Mike Pence",
+          "last": "Pence",
+          "image": "pence.jpg"
+        }
+      }
+    },
+    "jacksonville": {
+      "variables": {
+        "variant_city": "Jacksonville",
+        "variant_state": "FL",
+        "grade": "B",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Rick Scott",
+          "last": "Scott",
+          "image": "scott.jpg"
+        }
+      }
+    },
+    "kansas_city": {
+      "variables": {
+        "variant_city": "Kansas City",
+        "variant_state": "MO",
+        "grade": "A+",
+        "tone": "thanks",
+        "target": {
+          "title": "Governor",
+          "name": "Jay Nixon",
+          "last": "Nixon",
+          "image": "nixon.jpg"
+        }
+      }
+    },
+    "las_vegas": {
+      "variables": {
+        "variant_city": "Las Vegas",
+        "variant_state": "NV",
+        "grade": "B",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Brian Sandoval",
+          "last": "Sandoval",
+          "image": "sandoval.jpg"
+        }
+      }
+    },
+    "long_beach": {
+      "variables": {
+        "variant_city": "Long Beach",
+        "variant_state": "CA",
+        "grade": "F",
+        "tone": "hostile",
+        "target": {
+          "title": "Governor",
+          "name": "Edmund G. Brown Jr.",
+          "last": "Brown",
+          "image": "brown_jerry.jpg"
+        }
+      }
+    },
+    "los_angeles": {
+      "variables": {
+        "variant_city": "Los Angeles",
+        "variant_state": "CA",
+        "grade": "F",
+        "tone": "hostile",
+        "target": {
+          "title": "Governor",
+          "name": "Edmund G. Brown Jr.",
+          "last": "Brown",
+          "image": "brown_jerry.jpg"
+        }
+      }
+    },
+    "louisville": {
+      "variables": {
+        "variant_city": "Louisville",
+        "variant_state": "KY",
+        "grade": "B+",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Steve Beshear",
+          "last": "Beshear",
+          "image": "beshear.jpg"
+        }
+      }
+    },
+    "memphis": {
+      "variables": {
+        "variant_city": "Memphis",
+        "variant_state": "TN",
+        "grade": "B",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Bill Haslam",
+          "last": "Haslam",
+          "image": "haslam.jpg"
+        }
+      }
+    },
+    "mesa": {
+      "variables": {
+        "variant_city": "Mesa",
+        "variant_state": "AZ",
+        "grade": "A",
+        "tone": "thanks",
+        "target": {
+          "title": "Governor",
+          "name": "Doug Ducey",
+          "last": "Ducey",
+          "image": "ducey.jpg"
+        }
+      }
+    },
+    "miami": {
+      "variables": {
+        "variant_city": "Miami",
+        "variant_state": "FL",
+        "grade": "C",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Rick Scott",
+          "last": "Scott",
+          "image": "scott.jpg"
+        }
+      }
+    },
+    "milwaukee": {
+      "variables": {
+        "variant_city": "Milwaukee",
+        "variant_state": "WI",
+        "grade": "B+",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Scott Walker",
+          "last": "Walker",
+          "image": "walker.jpg"
+        }
+      }
+    },
+    "minneapolis": {
+      "variables": {
+        "variant_city": "Minneapolis",
+        "variant_state": "MN",
+        "grade": "F",
+        "tone": "hostile",
+        "target": {
+          "title": "Governor",
+          "name": "Mark Dayton",
+          "last": "Dayton",
+          "image": "dayton.jpg"
+        }
+      }
+    },
+    "nashville": {
+      "variables": {
+        "variant_city": "Nashville",
+        "variant_state": "TN",
+        "grade": "B",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Bill Haslam",
+          "last": "Haslam",
+          "image": "haslam.jpg"
+        }
+      }
+    },
+    "new_orleans": {
+      "variables": {
+        "variant_city": "New Orleans",
+        "variant_state": "LA",
+        "grade": "C-",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "John Bel Edwards",
+          "last": "Edwards",
+          "image": "edwards.jpg"
+        }
+      }
+    },
+    "new_york": {
+      "variables": {
+        "variant_city": "New York",
+        "variant_state": "NY",
+        "grade": "D+",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Andrew Cuomo",
+          "last": "Cuomo",
+          "image": "cuomo.jpg"
+        }
+      }
+    },
+    "oakland": {
+      "variables": {
+        "variant_city": "Oakland",
+        "variant_state": "CA",
+        "grade": "F",
+        "tone": "hostile",
+        "target": {
+          "title": "Governor",
+          "name": "Edmund G. Brown Jr.",
+          "last": "Brown",
+          "image": "brown_jerry.jpg"
+        }
+      }
+    },
+    "oklahoma_city": {
+      "variables": {
+        "variant_city": "Oklahoma City",
+        "variant_state": "OK",
+        "grade": "B",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Mary Fallin",
+          "last": "Fallin",
+          "image": "fallin.jpg"
+        }
+      }
+    },
+    "omaha": {
+      "variables": {
+        "variant_city": "Omaha",
+        "variant_state": "NE",
+        "grade": "B+",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Pete Ricketts",
+          "last": "Ricketts",
+          "image": "ricketts.jpg"
+        }
+      }
+    },
+    "orlando": {
+      "variables": {
+        "variant_city": "Orlando",
+        "variant_state": "FL",
+        "grade": "B",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Rick Scott",
+          "last": "Scott",
+          "image": "scott.jpg"
+        }
+      }
+    },
+    "philadelphia": {
+      "variables": {
+        "variant_city": "Philadelphia",
+        "variant_state": "PA",
+        "grade": "F",
+        "tone": "hostile",
+        "target": {
+          "title": "Governor",
+          "name": "Tom Wolf",
+          "last": "Wolf",
+          "image": "wolf.jpg"
+        }
+      }
+    },
+    "phoenix": {
+      "variables": {
+        "variant_city": "Phoenix",
+        "variant_state": "AZ",
+        "grade": "A",
+        "tone": "thanks",
+        "target": {
+          "title": "Governor",
+          "name": "Doug Ducey",
+          "last": "Ducey",
+          "image": "ducey.jpg"
+        }
+      }
+    },
+    "portland": {
+      "variables": {
+        "variant_city": "Portland",
+        "variant_state": "OR",
+        "grade": "D",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Kate Brown",
+          "last": "Brown",
+          "image": "brown_kate.jpg"
+        }
+      }
+    },
+    "raleigh": {
+      "variables": {
+        "variant_city": "Raleigh",
+        "variant_state": "NC",
+        "grade": "B",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Pat McCrory",
+          "last": "McCrory",
+          "image": "mccrory.jpg"
+        }
+      }
+    },
+    "sacramento": {
+      "variables": {
+        "variant_city": "Sacramento",
+        "variant_state": "CA",
+        "grade": "F",
+        "tone": "hostile",
+        "target": {
+          "title": "Governor",
+          "name": "Edmund G. Brown Jr.",
+          "last": "Brown",
+          "image": "brown_jerry.jpg"
+        }
+      }
+    },
+    "san_antonio": {
+      "variables": {
+        "variant_city": "San Antonio",
+        "variant_state": "TX",
+        "grade": "B+",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Greg Abbott",
+          "last": "Abbott",
+          "image": "abbott.jpg"
+        }
+      }
+    },
+    "san_diego": {
+      "variables": {
+        "variant_city": "San Diego",
+        "variant_state": "CA",
+        "grade": "F",
+        "tone": "hostile",
+        "target": {
+          "title": "Governor",
+          "name": "Edmund G. Brown Jr.",
+          "last": "Brown",
+          "image": "brown_jerry.jpg"
+        }
+      }
+    },
+    "san_francisco": {
+      "variables": {
+        "variant_city": "San Francisco",
+        "variant_state": "CA",
+        "grade": "F",
+        "tone": "hostile",
+        "target": {
+          "title": "Governor",
+          "name": "Edmund G. Brown Jr.",
+          "last": "Brown",
+          "image": "brown_jerry.jpg"
+        }
+      }
+    },
+    "san_jose": {
+      "variables": {
+        "variant_city": "San Jose",
+        "variant_state": "CA",
+        "grade": "F",
+        "tone": "hostile",
+        "target": {
+          "title": "Governor",
+          "name": "Edmund G. Brown Jr.",
+          "last": "Brown",
+          "image": "brown_jerry.jpg"
+        }
+      }
+    },
+    "seattle": {
+      "variables": {
+        "variant_city": "Seattle",
+        "variant_state": "WA",
+        "grade": "B-",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Jay Inslee",
+          "last": "Inslee",
+          "image": "inslee.jpg"
+        }
+      }
+    },
+    "tucson": {
+      "variables": {
+        "variant_city": "Tucson",
+        "variant_state": "AZ",
+        "grade": "A",
+        "tone": "thanks",
+        "target": {
+          "title": "Governor",
+          "name": "Doug Ducey",
+          "last": "Ducey",
+          "image": "ducey.jpg"
+        }
+      }
+    },
+    "tulsa": {
+      "variables": {
+        "variant_city": "Tulsa",
+        "variant_state": "OK",
+        "grade": "B",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Mary Fallin",
+          "last": "Fallin",
+          "image": "fallin.jpg"
+        }
+      }
+    },
+    "virginia_beach": {
+      "variables": {
+        "variant_city": "Virginia Beach",
+        "variant_state": "VA",
+        "grade": "A+",
+        "tone": "thanks",
+        "target": {
+          "title": "Governor",
+          "name": "Terry McAuliffe",
+          "last": "McAuliffe",
+          "image": "mcauliffe.jpg"
+        }
+      }
+    },
+    "washington": {
+      "variables": {
+        "variant_city": "Washington",
+        "variant_state": "DC",
+        "grade": "D-",
+        "tone": "hostile",
+        "target": {
+          "title": "Mayor",
+          "name": "Muriel Bowser",
+          "last": "Bowser",
+          "image": "bowser.jpg"
+        }
+      }
+    },
+    "wichita": {
+      "variables": {
+        "variant_city": "Wichita",
+        "variant_state": "KS",
+        "grade": "B",
+        "tone": "help",
+        "target": {
+          "title": "Governor",
+          "name": "Sam Brownback",
+          "last": "Brownback",
+          "image": "brownback.jpg"
+        }
+      }
+    }
+  }
+}

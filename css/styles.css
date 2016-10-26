@@ -1,0 +1,336 @@
+/* VapeScore card
+*******************************************************************************/
+/* Base document styles
+*******************************************************************************/
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 300;
+}
+.card {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  color: #fff;
+  background: #000;
+  overflow: hidden;
+}
+/* Mixins/helper classes
+*******************************************************************************/
+.card--vapescore {
+  display: flex;
+  flex-direction: column;
+  font-family: 'mr-eaves-modern', 'Helvetica Neue', 'Helvetica', sans-serif;
+}
+.card--vapescore .content {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card--vapescore .content--thanks,
+.card--vapescore .content--help,
+.card--vapescore .content--hostile {
+  display: none;
+}
+.card--vapescore .branding,
+.card--vapescore .target,
+.card--vapescore .message,
+.card--vapescore .footer {
+  position: relative;
+}
+.card--vapescore .branding {
+  position: relative;
+  height: 3em;
+  background: #7d247d;
+  text-align: center;
+  border-bottom: 1px solid #551955;
+  z-index: 2;
+}
+.card--vapescore .branding::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.card--vapescore .branding img {
+  position: relative;
+  top: 0.27em;
+  width: 5.5em;
+  opacity: 0.65;
+}
+.card--vapescore .main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 1 1 auto;
+  padding: 1.125em 1.5em;
+}
+.card--vapescore .main .target,
+.card--vapescore .main .message {
+  text-align: center;
+  z-index: 2;
+}
+.card--vapescore .main .target {
+  position: relative;
+  flex: 0 0 auto;
+  width: 37.5%;
+  margin-right: 1.5em;
+}
+.card--vapescore .main .target .photo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 0;
+}
+.card--vapescore .main .target .grade {
+  position: absolute;
+  left: -3.5em;
+  bottom: -3em;
+  width: 11em;
+  transform: rotate(-6deg);
+  z-index: 1;
+}
+.card--vapescore .main .message {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.15em;
+}
+.card--vapescore .main .message .greeting,
+.card--vapescore .main .message .signature {
+  flex: 0 0 auto;
+}
+.card--vapescore .main .message .greeting,
+.card--vapescore .main .message .body {
+  font-weight: 500;
+}
+.card--vapescore .main .message .greeting {
+  font-size: 1.75em;
+  line-height: 1em;
+}
+.card--vapescore .main .message .greeting .name {
+  font-weight: 600;
+}
+.card--vapescore .main .message .body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+  margin: 25px 0;
+}
+.card--vapescore .main .message .body .grade {
+  width: 1.25em;
+  margin: 0 0.15em;
+}
+.card--vapescore .main .message .body .intro,
+.card--vapescore .main .message .body .closing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+.card--vapescore .main .message .body .intro {
+  margin-bottom: 0.3em;
+}
+.card--vapescore .main .message .body .closing {
+  margin-top: 0.2em;
+}
+.card--vapescore .main .message .body .location {
+  margin: 0.15em 0;
+  padding: 0.25em 0.5em;
+  font-size: 2.75em;
+  font-weight: 600;
+  color: #fff;
+}
+.card--vapescore .main .message .signature {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.card--vapescore .main .message .signature .photo {
+  width: 4.75em;
+  height: 4.75em;
+  margin-right: 1em;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: 3px solid #fff;
+  background-size: cover;
+  border-radius: 50%;
+}
+.card--vapescore .main .message .signature .user {
+  position: relative;
+}
+.card--vapescore .main .message .signature .user .name {
+  font-size: 1.75em;
+  font-weight: 600;
+}
+.card--vapescore .main .message .signature .user .location {
+  font-size: 1.25em;
+  font-weight: 500;
+}
+.card--vapescore .footer {
+  position: relative;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 3em;
+  padding: 0.5em 1.5em;
+  background: #7d247d;
+  color: rgba(255, 255, 255, 0.65);
+  border-top: 1px solid #551955;
+  z-index: 1;
+}
+.card--vapescore .footer::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.card--vapescore .smoke {
+  position: absolute;
+  top: 2.5em;
+  left: 50%;
+  width: 150%;
+  transform: translatex(-50%);
+  z-index: 1;
+}
+.card--vapescore .smoke img {
+  width: 100%;
+}
+.card--vapescore .background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0.45;
+  z-index: 0;
+}
+.card--vapescore .background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(to bottom, #000000, transparent);
+  opacity: 0.5;
+}
+.card--vapescore .background .dots {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(/public/img/vapescore/dots.gif);
+  z-index: 0;
+}
+.card--vapescore.tone--thanks .content--thanks {
+  display: flex;
+}
+.card--vapescore.tone--thanks .greeting .name {
+  color: #03b439;
+}
+.card--vapescore.tone--thanks .body .location {
+  background: #028c2c;
+}
+.card--vapescore.tone--thanks .signature .user .name {
+  color: #03b439;
+}
+.card--vapescore.tone--help .content--help {
+  display: flex;
+}
+.card--vapescore.tone--help .message[data-grade="B"] .greeting .name,
+.card--vapescore.tone--help .message[data-grade="B-"] .greeting .name,
+.card--vapescore.tone--help .message[data-grade="B+"] .greeting .name {
+  color: #82a905;
+}
+.card--vapescore.tone--help .message[data-grade="B"] .body .location,
+.card--vapescore.tone--help .message[data-grade="B-"] .body .location,
+.card--vapescore.tone--help .message[data-grade="B+"] .body .location {
+  background: #82a905;
+}
+.card--vapescore.tone--help .message[data-grade="B"] .signature .user .name,
+.card--vapescore.tone--help .message[data-grade="B-"] .signature .user .name,
+.card--vapescore.tone--help .message[data-grade="B+"] .signature .user .name {
+  color: #82a905;
+}
+.card--vapescore.tone--help .message[data-grade="C"] .greeting .name,
+.card--vapescore.tone--help .message[data-grade="C-"] .greeting .name,
+.card--vapescore.tone--help .message[data-grade="C+"] .greeting .name {
+  color: #ecbd05;
+}
+.card--vapescore.tone--help .message[data-grade="C"] .body .location,
+.card--vapescore.tone--help .message[data-grade="C-"] .body .location,
+.card--vapescore.tone--help .message[data-grade="C+"] .body .location {
+  background: #ecbd05;
+}
+.card--vapescore.tone--help .message[data-grade="C"] .signature .user .name,
+.card--vapescore.tone--help .message[data-grade="C-"] .signature .user .name,
+.card--vapescore.tone--help .message[data-grade="C+"] .signature .user .name {
+  color: #ecbd05;
+}
+.card--vapescore.tone--hostile .content--hostile {
+  display: flex;
+}
+.card--vapescore.tone--hostile .target {
+  margin-right: 0;
+  margin-left: 0.15em;
+}
+.card--vapescore.tone--hostile .target .photo {
+  transform: rotate(3deg) translate3d(-50%, -50%, 0);
+}
+.card--vapescore.tone--hostile .target .grade {
+  position: absolute;
+  left: auto;
+  right: -4em;
+  transform: rotate(6deg);
+}
+.card--vapescore.tone--hostile .message {
+  order: -1;
+  margin-left: 0;
+  margin-right: 0.15em;
+}
+.card--vapescore.tone--hostile .greeting .name {
+  color: #e43a08;
+}
+.card--vapescore.tone--hostile .body .location {
+  background: #cb3407;
+}
+.card--vapescore.tone--hostile .signature .user .name {
+  color: #e43a08;
+}
+.card--vapescore.tone--hostile .footer {
+  justify-content: center;
+}
+.card--vapescore.tone--hostile .smoke {
+  transform: translatex(-50%) rotate(180deg);
+}
