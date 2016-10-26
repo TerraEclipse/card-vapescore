@@ -12,6 +12,9 @@
   "styles": [
     "./css/styles.css"
   ],
+  "scripts": [
+    "./js/bj.js"
+  ],
   "variables": {
     "first": "Your",
     "last": "Name",
