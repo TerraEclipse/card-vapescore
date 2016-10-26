@@ -13,7 +13,7 @@
     "./css/styles.css"
   ],
   "scripts": [
-    "./js/bj.js"
+    "./js/bg.js"
   ],
   "variables": {
     "first": "Your",
