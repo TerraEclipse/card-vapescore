@@ -1,2 +1,1 @@
-# card-roomscore
-Card repo for Roomscore campaign
+# card-vapescore

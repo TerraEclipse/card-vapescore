@@ -1,0 +1,378 @@
+/* VapeScore card
+*******************************************************************************/
+
+@import './base.less';
+@import './mixins.less';
+
+// Layout variables
+@layout--gutter-size: 1.5em;
+
+// Color variables
+@color--base: #7d247d;
+@color--base-light: lighten(@color--base, 15%);
+@color--base-dark: darken(@color--base, 10%);
+@color--thanks: #028c2c;
+@color--thanks-light: lighten(@color--thanks, 8%);
+@color--help-b: #82a905;
+@color--help-c: #ecbd05;
+@color--hostile: #cb3407;
+
+.card--vapescore {
+  display: flex;
+  flex-direction: column;
+  font-family: 'mr-eaves-modern', 'Helvetica Neue', 'Helvetica', sans-serif;
+
+  // Common styles
+  .content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .content--thanks,
+  .content--help,
+  .content--hostile {
+    display: none;
+  }
+  .branding,
+  .target,
+  .message,
+  .footer {
+    position: relative;
+  }
+  .branding {
+    position: relative;
+    height: @layout--gutter-size * 2;
+    background: @color--base;
+    text-align: center;
+    border-bottom: 1px solid @color--base-dark;
+    z-index: 2;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 0;
+      bottom: 3px;
+      width: 100%;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    img {
+      position: relative;
+      top: 0.27em;
+      width: 5.5em;
+      opacity: 0.65;
+    }
+  }
+  .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 1 1 auto;
+    padding: (@layout--gutter-size * 0.75) @layout--gutter-size;
+
+    .target,
+    .message {
+      text-align: center;
+      z-index: 2;
+    }
+    .target {
+      position: relative;
+      flex: 0 0 auto;
+      width: 37.5%;
+      margin-right: @layout--gutter-size;
+
+      .photo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 0;
+        padding-top: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 5px solid #fff;
+        border-radius: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        z-index: 0;
+      }
+      .grade {
+        position: absolute;
+        left: -3.5em;
+        bottom: -3em;
+        width: 11em;
+        transform: rotate(-6deg);
+        z-index: 1;
+      }
+    }
+    .message {
+      display: flex;
+      flex-direction: column;
+      margin-left: @layout--gutter-size / 10;
+
+      .greeting,
+      .signature {
+        flex: 0 0 auto;
+      }
+      .greeting,
+      .body {
+        font-weight: 500;
+      }
+      .greeting {
+        font-size: 1.75em;
+        line-height: 1em;
+
+        .name {
+          font-weight: 600;
+        }
+      }
+      .body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 auto;
+        margin: 25px 0;
+
+        .grade {
+          width: 1.25em;
+          margin: 0 0.15em;
+        }
+        .intro,
+        .closing {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          font-size: 2em;
+        }
+        .intro {
+          margin-bottom: 0.3em;
+        }
+        .closing {
+          margin-top: 0.2em;
+        }
+        .location {
+          margin: 0.15em 0;
+          padding: 0.25em 0.5em;
+          font-size: 2.75em;
+          font-weight: 600;
+          color: #fff;
+        }
+      }
+      .signature {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .photo {
+          width: 4.75em;
+          height: 4.75em;
+          margin-right: 1em;
+          background-position: center center;
+          background-repeat: no-repeat;
+          border: 3px solid #fff;
+          background-size: cover;
+          border-radius: 50%;
+        }
+        .user {
+          position: relative;
+
+          .name {
+            font-size: 1.75em;
+            font-weight: 600;
+          }
+          .location {
+            font-size: 1.25em;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    position: relative;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: @layout--gutter-size * 2;
+    padding: @layout--gutter-size / 3 @layout--gutter-size;
+    background: @color--base;
+    color: rgba(255,255,255,0.65);
+    border-top: 1px solid @color--base-dark;
+    z-index: 1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 0;
+      bottom: 3px;
+      width: 100%;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+  }
+  .smoke {
+    position: absolute;
+    top: 2.5em;
+    left: 50%;
+    width: 150%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    img {
+      width: 100%;
+    }
+  }
+  .background {
+    .fill-parent(0);
+    opacity: 0.45;
+    z-index: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 300px;
+      background: linear-gradient(to bottom, #000, transparent);
+      opacity: 0.5;
+    }
+    .dots {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: url(/public/img/vapescore/dots.gif);
+      z-index: 0;
+    }
+  }
+
+  // Tone-specific styles
+  &.tone--thanks {
+    .content--thanks {
+      display: flex;
+    }
+    .greeting {
+      .name {
+        color: @color--thanks-light;
+      }
+    }
+    .body {
+      .location {
+        background: @color--thanks;
+      }
+    }
+    .signature {
+      .user {
+        .name {
+          color: @color--thanks-light;
+        }
+      }
+    }
+  }
+  &.tone--help {
+    .content--help {
+      display: flex;
+    }
+    .message {
+      &[data-grade="B"],
+      &[data-grade="B-"],
+      &[data-grade="B+"] {
+        .greeting {
+          .name {
+            color: @color--help-b;
+          }
+        }
+        .body {
+          .location {
+            background: @color--help-b;
+          }
+        }
+        .signature {
+          .user {
+            .name {
+              color: @color--help-b;
+            }
+          }
+        }
+      }
+      &[data-grade="C"],
+      &[data-grade="C-"],
+      &[data-grade="C+"] {
+        .greeting {
+          .name {
+            color: @color--help-c;
+          }
+        }
+        .body {
+          .location {
+            background: @color--help-c;
+          }
+        }
+        .signature {
+          .user {
+            .name {
+              color: @color--help-c;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.tone--hostile {
+    .content--hostile {
+      display: flex;
+    }
+    .target {
+      margin-right: 0;
+      margin-left: @layout--gutter-size / 10;
+
+      .photo {
+        transform: rotate(3deg) translate3d(-50%, -50%, 0);
+      }
+      .grade {
+        position: absolute;
+        left: auto;
+        right: -4em;
+        transform: rotate(6deg);
+      }
+    }
+    .message {
+      order: -1;
+      margin-left: 0;
+      margin-right: @layout--gutter-size / 10;
+    }
+    .greeting {
+      .name {
+        color: lighten(@color--hostile, 5%);
+      }
+    }
+    .body {
+      .location {
+        background: @color--hostile;
+      }
+    }
+    .signature {
+      .user {
+        .name {
+          color: lighten(@color--hostile, 5%);
+        }
+      }
+    }
+    .footer {
+      justify-content: center;
+    }
+    .smoke {
+      transform: translateX(-50%) rotate(180deg);
+    }
+  }
+}
